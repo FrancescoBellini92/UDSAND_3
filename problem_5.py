@@ -17,7 +17,7 @@ class TrieNode:
         self.children[char] = TrieNode()
 
     @property
-    def suffixes(self, suffix = ''):
+    def suffixes(self):
         ## Recursive function that collects the suffix for
         ## all complete words below this point
         suffixes = []

@@ -64,7 +64,7 @@ def test_function(test_case):
     else:
         print("Fail")
 
-# test 1 -> find number in the array
+# test 1 -> find number in rotated sorted array (rotated simmetrically)
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 10])
 
 # test 2 -> find number not in the array
@@ -76,10 +76,10 @@ test_function([[], 1])
 # test 4 -> find number in sorted array asymmentrically rotated
 test_function([[10, 1, 2, 3, 4], 3])
 
-# test 6 -> find number in sorted array not rotated
+# test 5 -> find number in sorted array not rotated
 test_function([[1, 2, 3, 4, 5], 3])
 
-# test 7 -> find number at end
+# test 6 -> find number at end
 test_function([[1, 2, 3, 4, 5], 5])
 
 # test 7 -> find number at start

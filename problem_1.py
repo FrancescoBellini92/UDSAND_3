@@ -13,20 +13,28 @@ def sqrt(number):
 
     if number < 4:
         return 1
-    i = 2
-    j = 0
-    while True:
-        j+= 1
-        squared = i * i
-        if squared > number:
-            print(number, j)
-            return i - 1
-        i += 1
+
+    x = number
+    while True :
+        root = 0.5 * (x + (number / x))
+
+        if (abs(root - x) < 1) :
+            return round(root)
+
+        x = root
 
 
-
+# test case 1 -> find exact square root
 print ("Pass" if  (3 == sqrt(9)) else "Fail")
+
+#test case 2 -> find square root of 0
 print ("Pass" if  (0 == sqrt(0)) else "Fail")
-print ("Pass" if  (4 == sqrt(16)) else "Fail")
+
+#test case 3 -> find square root of 1
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
+
+#test case 4 -> find floored square root
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+
+#test case 5 -> find floored square root of decimal
+print ("Pass" if  (3 == sqrt(28/3)) else "Fail")

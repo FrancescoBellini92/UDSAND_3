@@ -1,13 +1,28 @@
 # TASK 7 EXPLANATION
 
-This task required traversing a tree-like structure called Trie.
+This task required using a Trie for making a router
 
-Regarding time complexity:
-- we consider time complexity in case of traversal for finding the handler associated to the route of interest
-- given n as the size of the input (n being the sub_strings resulting from the splitting of the route),
-- time complexity is O(n) as each of the sub_string requires traversing a node and exploring its children.
+I will describe the complexity of each method of the Node and Trie classes
 
-Regarding space complexity:
-- we consider space complexity not regarding the traversal per se but the persitence in memory of all routes
-- given n as the sum of all sub_strings from the splitting of all routes
-- space complexity is O(n), as each sub_string requires a node
+
+# Regarding time complexity
+
+Node:
+- insert: time complexity is O(1), as it involves adding a node to an hash map
+
+Trie:
+- insert: this method requires iterating on each substring of the route, thus time complexity is O(n) (given n as the substrings of the route)
+- find: this method iterates over each substring of the prefix, thus time complexity is O(n)
+
+
+# Regarding space complexity
+
+Node:
+- insert: space complexity is O(1), as it involves adding a node to an hash map
+
+Trie:
+- insert: this method requires creating new nodes for potentiall each substring of the route, so space complexity is O(n)
+- find: this method iterates over each substring of the route, but if we consider n as the number of substrings f the route, then space complexity is O(1), as no additional space in memory is occupied during the iteration
+
+
+Overall, managing data with a trie results in space complexity of O(n * m), where n is the number of routes and m is the average number of route substrings .

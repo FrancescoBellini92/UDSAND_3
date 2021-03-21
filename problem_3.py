@@ -23,6 +23,9 @@ def rearrange_digits(input_list):
         i -= 2
 
     output = [int(sum1), int(sum2)]
+    print('----\nTwo maximum sums:')
+    print(input_list)
+    print(output)
     return output
 
 
@@ -57,11 +60,20 @@ def test_function(test_case):
         print("Pass")
     else:
         print("Fail")
+# test case 1 -> summing an already sorted array
+test_function([[1, 2, 3, 4, 5], [531, 42]])
 
-test_function([[1, 2, 3, 4, 5], [542, 31]])
+# test case 2 -> summing an unsorted array
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
+
+# test case 3 -> summing an empty array
 test_function([[], []])
+
+# test case 4 -> summing a single integer array
 test_function([[1], [1]])
+
+#test case 5 -> summing an array of two integers
 test_function([[1, 2], [1, 2]])
+
+# test case 6 -> summing an array of
 test_function([[1, 2, 3], [32, 1]])
-test_function([[1, 2, 3, 4], [42, 31]])
