@@ -2,7 +2,7 @@
 """
 Finding suffixes with a trie in Python
 
-Before we start let us reiterate the key components of a Trie or Prefix Tree. A trie is a tree-like data antstructure that stores a dynamic set of strings.
+Before we start let us reiterate the key components of a Trie or Prefix Tree. A trie is a tree-like data structure that stores a dynamic set of strings.
 Tries are commonly used to facilitate operations like predictive text or autocomplete features on mobile phones or web search.
 """
 
